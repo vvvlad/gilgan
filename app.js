@@ -32,6 +32,9 @@ const app = Vue.createApp({
       this.displayResults = true;
       this.hovaSchoolDateString = this.getDateStringDisplay(hovaSchoolDate);
     },
+    hideResults() {
+      this.displayResults = false
+    },
     ageAtYearStart(schoolDate, birthDate) {
       var diffDate = new Date(schoolDate - birthDate);
       var years = diffDate.toISOString().slice(0, 4) - 1970;

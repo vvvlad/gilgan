@@ -19,7 +19,7 @@
     <section id="vue-section">
       <h3>בחר תאריך לידה</h3>
       <!-- date format="2018-01-01" -->
-      <input type="date" id="birthday-date" v-model="kidBirthday" />
+      <input type="date" id="birthday-date" v-model="kidBirthday" v-on:input="hideResults" />
       <br /><br />
       <button v-on:click="calcHova">חשב גיל גן חובה</button>
       <div v-if="displayResults">
