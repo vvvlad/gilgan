@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>חישוב גיל גן חובה</h1>
+    </header>
+    <section id="vue-section">
+      <h3>בחר תאריך לידה</h3>
+      <!-- date format="2018-01-01" -->
+      <input type="date" id="birthday-date" v-model="kidBirthday" />
+      <br /><br />
+      <button v-on:click="calcHova">חשב גיל גן חובה</button>
+      <div v-if="displayResults">
+        <br />
+        <h3>תאריך תחילת הלימודים</h3>
+        <p>{{hovaSchoolDateString}}</p>
+        <br />
+         <h3>גיל בתחילת הלימודים</h3>
+        <p dir="rtl">{{kidAgeHova}}</p>
+      </div>
+    </section>
+  </body>
+</html>
